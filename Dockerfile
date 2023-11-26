@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -Dskiptests 
 
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/Ubudehe-System-App-0.0.1-SNAPSHOT.jar Ubudehe-System-App.jar
+COPY --from=build /target/UbudeheSystemApp-0.0.1-SNAPSHOT.jar UbudeheSystemApp.jar
 EXPOSE 8080
-ENTRYPOINT [ "java","-jar","Ubudehe-System-App.jar" ]
+ENTRYPOINT [ "java","-jar","UbudeheSystemApp.jar" ]
